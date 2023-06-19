@@ -3,10 +3,6 @@
     padding: 0;overflow-x: hidden;
 }
 
-#banner img, article img{
-    background-color: black;
-}
-
 /*As per the layout instructions*/
 body{
     position: relative;
@@ -69,7 +65,7 @@ nav li>a{
 }
 
 nav li{
-    color: black;
+    color: #333333;
     display: inline-block;
     margin: 2.5rem 4rem 0 4rem;
     transition: 0.15s linear;
@@ -110,7 +106,7 @@ nav li:hover::after{
 }
 
 #banner div{
-    color: white;
+    color: #ffffff;
     position: absolute;
     top: 50%;
     transform: translate(10%, -50%);
@@ -126,18 +122,7 @@ nav li:hover::after{
     font-weight: 400;
 }
 
-#banner h1+a::after, #banner h1+a:before{
-    opacity: 0;
-    content: " - ";
-    transition: 0.25s;
-}
-#banner h1+a:hover::after, #banner h1+a:hover::before{
-    opacity: 1;
-    transition: 0.25s;
-}
-
 /*------*/
-
 
 /* Content */
 
@@ -146,6 +131,7 @@ nav li:hover::after{
     margin: 20px;
     display: flex;
     flex-direction: column;
+    color: #333333;
 }
 
 #content article>img{
@@ -157,7 +143,6 @@ nav li:hover::after{
     font-weight: 500;
     font-size: 1.2rem;
     margin: 0.5rem 0 0.5rem 0;
-    color: #333333;
 }
 
 #content article>p{
@@ -165,35 +150,40 @@ nav li:hover::after{
     font-weight: 400;
     text-align: justify;
     margin-bottom: 0.5rem ;
-    color: #333333;
+    
 }
 
 #content article>a{
     font-weight: 400;
-    color: #333333;
     align-self: end;
-}
-
-#content article>a::after, #content article>a::before{
-    content: " - ";
-    opacity: 0;
-    transition: 0.25s;
-}
-
-
-#content article>a:hover::after, #content article>a:hover::before, #content article>a:hover{
-    opacity: 1;
-    color: goldenrod;
-    transition: 0.25s;
 }
 
 /*------*/
 
 
+/*Anchor effects*/
+
+article a:hover{
+    transition: 0.25s;
+}
+
+article a::after, article a::before{
+    content: " - ";
+    opacity: 0;
+    transition: 0.25s;
+    color: rgb(241, 188, 72);
+}
+
+article a:hover::after, article a:hover::before{
+    opacity: 1;
+    transition: 0.25s;
+}
+/*-----*/
+
 /*Footer*/
 footer{
     background-color: #0f0f0f;
-    color: white;
+    color: #ffffff;
     position: relative;
 }
 
